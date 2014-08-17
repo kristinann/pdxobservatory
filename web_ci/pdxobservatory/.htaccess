@@ -1,0 +1,17 @@
+# Primary database username and password
+SetEnv DB_USER <enter you database user name>
+SetEnv DB_PASS <enter you database password>
+SetEnv BASE_URL http://pdxobservatory.cs.pdx.edu/
+SetEnv GUIDE_SERVICE_URL http://haystack.cs.pdx.edu/dev/connectportland/guide.php
+
+# Rewrite so that URLs don't have index.php in them
+# This is fine for production, but the rewrite rule
+#    need to be changed for your dev instance.
+RewriteEngine on
+RewriteBase /
+# Hide the application and system directories by redirecting the request to index.php
+RewriteRule ^(application|system) index.php/$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [QSA,L]
+

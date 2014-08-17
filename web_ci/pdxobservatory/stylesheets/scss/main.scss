@@ -1,0 +1,197 @@
+// Do something like:
+//   sass --style=compact --watch ./main.scss:../css/main.css
+// during development for easier previewing and all that jazz.
+//
+// For production, you can do:
+//   sass --style=compressed ./main.scss:../css/main.css
+// to get minified CSS.
+
+
+/* Do not edit the .css file — edit the SCSS files and compile them using sass */
+
+.jumbotron {
+  color : #060;
+  background-color: rgba(71, 150, 61, 0.55);
+  margin-left : auto;
+  margin-right : auto;
+  height: 240px;
+  .logos {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .jumbotron {
+    max-width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .jumbotron {
+    max-width: 970px;
+  }
+}
+
+@media ( min-width: 1200px ) {
+  .jumbotron {
+    max-width: 1170px;
+  }
+}
+
+@media ( min-width : 1400px ) {
+  .container {
+    width : 1370px;
+  }
+  .jumbotron {
+    max-width : 1370px;
+  }
+}
+
+body, html {
+  height: 100%;
+}
+
+#wrapper {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -60px;
+  padding: 0 0 60px;
+}
+
+select {
+  height: auto;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 10px;
+  &.input-sm {
+    line-height: 16px;
+  }
+}
+
+.form-group {
+  textarea {
+    resize: vertical;
+  }
+}
+
+.widget {
+  .form-group div {
+    padding: 0;
+  }
+  .form-horizontal {
+    .has-feedback {
+      .form-control-feedback {
+        pointer-events: none;
+        line-height: 26px;
+        right: 0;
+      }
+    }
+  }
+}
+
+.input-timepicker {
+  input {
+    text-align: center;
+  }
+}
+
+.comment-instructions-control {
+  border: 1px solid #777;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius:5px;
+  padding: 6px 8px;
+
+  .btn {
+    margin: 0 0 0 6px;
+  }
+}
+
+.container {
+  &.timepicker {
+    width: 100px;
+    .row {
+      div {
+        padding: 0;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.dropdown-menu {
+  &.bootstrap-timepicker-widget {
+    min-width: 100px;
+    &.timepicker-orient-center {
+      &:before {
+        left: 45px;
+      }
+      &:after {
+        left: 46px;
+      }
+    }
+  }
+}
+
+.btn-default {
+  span.glyphicon {
+    color: rgb(124, 135, 218);
+  }
+}
+
+.btn-primary {
+  span.glyphicon {
+    color: #fff;
+  }
+}
+
+.btn {
+  text-align: left;
+}
+
+.input-timepicker {
+  .input-group-addon {
+    width: auto;
+    min-width: 16px;
+    padding: 4px 5px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff;
+    vertical-align: middle;
+    background-color: #eeeeee;
+    border: solid #cccccc;
+    border-width: 1px 0;
+    margin-left: -5px;
+    margin-right: -5px;
+    &:last-child {
+      border-width: 1px 1px 1px 0;
+      pointer-events: none;
+    }
+    &:first-child {
+      border-width: 1px 0 1px 1px;
+    }
+  }
+}
+
+div {
+  .map-div {
+    border: 1px solid #ccc;
+    margin: 8px 0;
+    height: 400px;
+    @media ( min-height: 800px ) {
+      height: 600px;
+    }
+  }
+}
+
+.frontpage {
+  .col-sm-4 {
+    text-align : center;
+
+    p {
+      text-align : left;
+    }
+  }
+}
